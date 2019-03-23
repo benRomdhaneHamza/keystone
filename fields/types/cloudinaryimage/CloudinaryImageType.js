@@ -55,13 +55,13 @@ function cloudinaryimage (list, path, options) {
 
 	cloudinaryimage.super_.call(this, list, path, options);
 	// validate cloudinary config
-	if (!keystone.get('cloudinary config')) {
-		throw new Error(
-			'Invalid Configuration\n\n'
-			+ 'CloudinaryImage fields (' + list.key + '.' + this.path + ') require the "cloudinary config" option to be set.\n\n'
-			+ 'See http://keystonejs.com/docs/configuration/#services-cloudinary for more information.\n'
-		);
-	}
+	// if (!keystone.get('cloudinary config')) {
+	// 	throw new Error(
+	// 		'Invalid Configuration\n\n'
+	// 		+ 'CloudinaryImage fields (' + list.key + '.' + this.path + ') require the "cloudinary config" option to be set.\n\n'
+	// 		+ 'See http://keystonejs.com/docs/configuration/#services-cloudinary for more information.\n'
+	// 	);
+	// }
 }
 cloudinaryimage.properName = 'CloudinaryImage';
 util.inherits(cloudinaryimage, FieldType);
